@@ -1,0 +1,76 @@
+{
+	"embeds": {
+		"openTicket": {
+			"title": "✨ GLOX SUPPORT CENTER ✨",
+			"description": "Welcome to our support department! \n\nBefore opening a ticket, please make sure you have checked our rules and FAQ channels.\n\n**Select the most appropriate category below to start talking with our staff:**\n\n> 💰 **Sale:** Bulk purchases, price inquiries, and payment issues.\n> ℹ️ **Info:** General questions about our services or products.\n> ❓ **Other:** Technical support and any other topics.\n\n*Our staff will respond as soon as possible.*",
+			"image": {
+				"url": "https://media.discordapp.net/attachments/1155132583919751319/1475893713270997284/ticket.png?ex=699f24a2&is=699dd322&hm=b59e4f0b11b3e59bcb1063c065414cfc4afd51c499b1273808b9952e48182479&=&format=webp&quality=lossless&width=420&height=280"
+			},
+			"footer": {
+				"text": "Glox Ticket System • Fast & Reliable"
+			}
+		},
+		"ticketOpened": {
+			"title": "Ticket CATEGORYNAME",
+			"description": "Our support team will assist you as shortly as possible.",
+			"footer": {
+				"text": "Glox Support"
+			}
+		},
+		"ticketClosed": {
+			"title": "Ticket closed",
+			"description": "The ticket has been closed by CLOSERNAME with the following reason: `REASON`",
+			"deleteTicketInfo": "> The ticket will be deleted in 15 seconds"
+		},
+		"ticketClosedDM": {
+			"title": "Ticket closed",
+			"description": "The ticket n°TICKETCOUNT has been closed by CLOSERNAME with the following reason: `REASON`\n\nHere is the transcript of the ticket: TRANSCRIPTURL",
+			"footer": {
+				"text": "Glox Support"
+			}
+		}
+	},
+	"modals": {
+		"reasonTicketOpen": {
+			"title": "Open ticket",
+			"label": "The reason of your ticket",
+			"placeholder": "Please enter the reason of why you are opening a ticket"
+		},
+		"reasonTicketClose": {
+			"title": "Close ticket",
+			"label": "The reason of the ticket closure",
+			"placeholder": "Please enter the reason of why you are closing the ticket"
+		}
+	},
+	"buttons": {
+		"close": {
+			"label": "Close ticket",
+			"emoji": "🔒"
+		},
+		"claim": {
+			"label": "Claim",
+			"emoji": "🙋"
+		}
+	},
+	"invalidConfig": "Invalid configuration detected, please ask the bot operator to fix it!",
+	"ticketOpenedMessage": "Ticket opened! TICKETCHANNEL",
+	"ticketOnlyClaimableByStaff": "The ticket can only be claimed by a staff!",
+	"ticketAlreadyClaimed": "The ticket is already claimed!",
+	"ticketClaimedMessage": "> Ticket claimed by USER",
+	"ticketOnlyClosableByStaff": "Only staff can close the ticket!",
+	"ticketAlreadyClosed": "The ticket is already closed!",
+	"ticketCreatingTranscript": "> Creating transcript...",
+	"ticketTranscriptCreated": "> Transcript created! TRANSCRIPTURL",
+	"ticketOnlyRenamableByStaff": "Only staff can rename tickets!",
+	"ticketRenamed": "> Ticket renamed to NEWNAME",
+	"ticketLimitReached": "You can only have TICKETLIMIT tickets opened at the same time!",
+	"noTickets": "You don't have access to any tickets",
+	"other": {
+		"openTicketButtonMSG": "Create Ticket",
+		"deleteTicketButtonMSG": "Delete ticket",
+		"selectTicketTypePlaceholder": "Choose a category...",
+		"claimedBy": "**Claimed By**: USER",
+		"noReasonGiven": "No reason given",
+		"unavailable": "Unavailable"
+	}
+}
