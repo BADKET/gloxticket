@@ -12,6 +12,9 @@ import {
 import { ExtendedClient, TicketType } from "../structure";
 import { log } from "./logs";
 
+// Lock set to prevent duplicate ticket creation
+const creatingTicket = new Set<string>();
+
 /*
 Copyright 2026 BADKET
 */
@@ -28,6 +31,15 @@ export const createTicket = async (
 	ticketType: TicketType,
 	reasons?: Collection<string, TextInputComponent> | string
 ) => {
+	// Prevent duplicate ticket creation (race condition / double click)
+	if (creatingTicket.has(interaction.user.id)) {
+		await interaction.deferReply({ ephemeral: true }).catch(() => null);
+		await interaction.editReply({ content: "⏳ Your ticket is already being created, please wait..." }).catch(() => null);
+		return;
+	}
+	creatingTicket.add(interaction.user.id);
+	setTimeout(() => creatingTicket.delete(interaction.user.id), 10000); // 10 second lock
+
 	const locale = client.locales;
 	// eslint-disable-next-line no-async-promise-executor
 	return new Promise(async function (resolve, reject) {
