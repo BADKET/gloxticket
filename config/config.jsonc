@@ -1,9 +1,9 @@
 {
 	"clientId": "1475872704119963789", // The id of the discord bot
-	"guildId": "1475575732406190313", // The id of the discord server
+	"guildId": "962697513771606056", // The id of the discord server
 	"mainColor": "#8B5CF6", // The hex color of the embeds by default
 	"lang": "main", // If you want to set english please set "main"
-	"openTicketChannelId": "1475872451643838607", // The id of the channel where the message to create a ticket will be sent
+	"openTicketChannelId": "1414002053994516490", // The id of the channel where the message to create a ticket will be sent
 	"ticketTypes": [
 		{
 			"codeName": "sales",
@@ -11,7 +11,7 @@
 			"description": "Sales related inquiries",
 			"emoji": "💵",
 			"color": "#8B5CF6",
-			"categoryId": "1475872392159957166",
+			"categoryId": "977557478264946700",
 			"ticketNameOption": "sale-USERNAME",
 			"customDescription": "Welcome! Please tell us what you would like to purchase.\n\n**Reason:** REASON1\n\n> Our support team will assist you as soon as possible.",
 			"cantAccess": [],
@@ -32,7 +32,7 @@
 			"description": "Information and questions",
 			"emoji": "📩",
 			"color": "#8B5CF6",
-			"categoryId": "1475872392159957166",
+			"categoryId": "977557478264946700",
 			"ticketNameOption": "info-USERNAME",
 			"customDescription": "How can we help you today? Please ask your question below.\n\n**Reason:** REASON1\n\n> Our support team will assist you as soon as possible.",
 			"cantAccess": [],
@@ -53,7 +53,7 @@
 			"description": "Anything else",
 			"emoji": "📁",
 			"color": "",
-			"categoryId": "1475872392159957166",
+			"categoryId": "977557478264946700",
 			"ticketNameOption": "ticket-TICKETCOUNT",
 			"customDescription": "Thank you for reaching out. Please describe your issue.\n\n**Reason:** REASON1\n\n> Our support team will assist you as soon as possible.",
 			"cantAccess": [],
@@ -81,10 +81,10 @@
 	"rolesWhoCanNotCreateTickets": [],
 	"pingRoleWhenOpened": true,
 	"roleToPingWhenOpenedId": [
-		"1475882818646311029"
+		"977937014110433330"
 	],
 	"logs": true,
-	"logsChannelId": "1475873782618001543",
+	"logsChannelId": "1475935436873666590",
 	"closeOption": {
 		"closeButton": true,
 		"dmUser": true,
@@ -92,7 +92,7 @@
 		"askReason": true,
 		"whoCanCloseTicket": "STAFFONLY",
 		"deleteTicket": false,
-		"closeTicketCategoryId": "1475898084159525108"
+		"closeTicketCategoryId": "1475935224134111292"
 	},
 	"uuidType": "uuid",
 	"status": {
