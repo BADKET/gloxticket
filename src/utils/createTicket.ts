@@ -38,12 +38,25 @@ export const createTicket = async (
 		return;
 	}
 	creatingTicket.add(interaction.user.id);
-	setTimeout(() => creatingTicket.delete(interaction.user.id), 10000); // 10 second lock
+	setTimeout(() => creatingTicket.delete(interaction.user.id), 15000); // 15 second lock
 
 	const locale = client.locales;
 	// eslint-disable-next-line no-async-promise-executor
 	return new Promise(async function (resolve, reject) {
 		await interaction.deferReply({ ephemeral: true }).catch((e) => console.log(e));
+
+		// Database-level duplicate check: prevent multiple tickets created within 10 seconds
+		const recentTicket = await client.prisma.$queryRaw<[{ count: bigint }]>`
+			SELECT COUNT(*) as count FROM tickets
+			WHERE creator = ${interaction.user.id}
+			AND createdat > ${Date.now() - 10000}
+			AND closedby IS NULL
+		`;
+		if (recentTicket[0].count > 0) {
+			creatingTicket.delete(interaction.user.id);
+			await interaction.editReply({ content: "⏳ Your ticket was just created, please wait a moment." }).catch(() => null);
+			return resolve(false);
+		}
 
 		const reason: string[] = [];
 		let allReasons = "";
