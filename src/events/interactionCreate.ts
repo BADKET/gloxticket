@@ -24,11 +24,18 @@ Copyright 2026 BADKET
 */
 
 export default class InteractionCreateEvent extends BaseEvent {
+	private handledInteractions = new Set<string>();
+
 	constructor(client: ExtendedClient) {
 		super(client);
 	}
 
 	public async execute(interaction: Interaction): Promise<void> {
+		// Deduplicate interactions to prevent double-processing
+		if (this.handledInteractions.has(interaction.id)) return;
+		this.handledInteractions.add(interaction.id);
+		setTimeout(() => this.handledInteractions.delete(interaction.id), 30000);
+
 		if (interaction.isChatInputCommand()) {
 			const command = this.client.commands.get(interaction.commandName);
 			if (!command) return;
