@@ -1,9 +1,9 @@
 {
-	"clientId": "1475872704119963789", // The id of the discord bot
-	"guildId": "962697513771606056", // The id of the discord server
-	"mainColor": "#8B5CF6", // The hex color of the embeds by default
-	"lang": "main", // If you want to set english please set "main"
-	"openTicketChannelId": "1414002053994516490", // The id of the channel where the message to create a ticket will be sent
+	"clientId": "1475872704119963789",
+	"guildId": "962697513771606056",
+	"mainColor": "#8B5CF6",
+	"lang": "main",
+	"openTicketChannelId": "1414002053994516490",
 	"ticketTypes": [
 		{
 			"codeName": "sales",
@@ -76,12 +76,12 @@
 		"categoryWhenClaimed": ""
 	},
 	"rolesWhoHaveAccessToTheTickets": [
-		"1475882818646311029"
+		"977937014110433330"
 	],
 	"rolesWhoCanNotCreateTickets": [],
 	"pingRoleWhenOpened": true,
 	"roleToPingWhenOpenedId": [
-		"977937014110433330"
+		"962698072511627355"
 	],
 	"logs": true,
 	"logsChannelId": "1475935436873666590",
